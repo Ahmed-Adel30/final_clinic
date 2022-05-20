@@ -40,4 +40,6 @@ def log(request):
 
 def try_temp(request):
     return render(request,'try.html')
-# Create your views here.
+
+def lm(request):
+    return render(request, 'registration/learnmore.html')
