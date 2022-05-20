@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <title>Sign Up | By Code Info</title>
+    
+    <link rel="stylesheet" href={% static "css/register_style.css "%} />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="signup-box">
+      <h1>Sign Up</h1>
+      <h4>It's free and only takes a minute</h4>
+      <form method='POST' action=''>
+        {% csrf_token %}
+        <label>UserName</label>
+        {{form.username}}
+        <label>Email</label>
+        {{form.email}}
+        <label>Password</label>
+        {{form.password1}}
+        <label>Confirm Password</label>
+        {{form.password2}}
+        <input type="submit" value="Register Account" />
+      </form>
+      <p>
+        By clicking the Sign Up button,you agree to our <br />
+        <a href="#">Terms and Condition</a> and <a href="#">Policy Privacy</a>
+      </p>
+      <div>
+        {{form.errors}} 
+      </div>
+      
+    </div>
+    <p class="para-2">
+      Already have an account? <a href="{% url 'log' %}">Login here</a>
+    </p>
+  </body>
+</html>
+
+
+
