@@ -31,7 +31,10 @@
         <a href="#">Terms and Condition</a> and <a href="#">Policy Privacy</a>
       </p>
       <div>
-        {{form.errors}} 
+        {% for error in form.errors %}
+          <p class="myerrors">{{error}}</p>
+        {% endfor %}
+        
       </div>
       
     </div>

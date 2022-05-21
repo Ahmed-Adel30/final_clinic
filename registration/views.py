@@ -5,6 +5,7 @@ from .forms import CreateUserForm
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
+# from app2.models import Major
 
 def my_views(request):
     return render(request,'main.html')
@@ -43,3 +44,5 @@ def try_temp(request):
 
 def lm(request):
     return render(request, 'registration/learnmore.html')
+
+
