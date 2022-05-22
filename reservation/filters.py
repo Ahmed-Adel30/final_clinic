@@ -5,6 +5,8 @@ from .models import *
 
 
 class DoctorsFilter(django_filters.FilterSet):
+    name= django_filters.CharFilter(lookup_expr='icontains')
+    location= django_filters.CharFilter(lookup_expr='icontains')
     class Meta:
         model = Doctors_profile
         fields  = '__all__'
