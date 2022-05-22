@@ -1,8 +1,66 @@
-<html>
-<body>
-<h1>ahmed</h1>
-
+{% comment %} <body>
+    <div class="row">
+        <div class="col">
+            <div class="card card-body">
+    
+                <form method="get">
+                    
+    
+                <button class="btn btn-primary" type="submit">Search</button>
+              </form>
+    
+            </div>
+        </div>
+        
+    </div>
 </body>
-</html>
 
 
+ {% endcomment %}
+
+
+ <html>
+    <head>
+        <style>
+        .city {
+          background-color:rgb(127, 137, 244);
+          color: white;
+          border: 2px solid black;
+          margin: 20px;
+          padding: 20px;
+        }
+        </style>
+  </head>
+
+  <body>
+    <div class="row">
+        <div class="col">
+            <div class="city">
+    
+                <form method="get">
+                    <label for="doc">Doctor Name</label>
+                    <input type="text" placeholder="Enter Doctor Name"  value ="" id="doc" name="doc_name" class="form-control" style="width: 150px; ">
+                   
+                    <label for="loc">Location</label>
+                    <input type="text" placeholder="Enter your location" id="loc" name="loc" class="form-control" style="width: 150px; ">
+
+                    <label for="Specialty">Specialty</label>
+                    <select name="Specialty" id="Specialty" class="form-control" name="Specialty" style="width: 150px;  ">
+                        <option value selected>Specialty</option>
+                        <option value ="2">Dentistry</option>
+                        <option value ="3">Psychiatry</option>
+                        <option value ="4">Neurology</option>
+                        <option value ="4">Brain & Nerves</option>
+                        
+                    </select>
+                    
+                <button class="btn btn-primary" type="submit">Search</button>
+              </form>
+    
+            </div>
+        </div>
+        
+    </div>
+
+ </body>
+</html> 

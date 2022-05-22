@@ -27,7 +27,7 @@ class Doctors_profile(models.Model):
     user = models.OneToOneField(User , verbose_name="user",on_delete=models.CASCADE)
 
     name=models.CharField(verbose_name="Name", max_length=50)
-    role = models.CharField(max_length=7)
+    #role = models.CharField(max_length=7)
     E_mail = models.CharField(max_length=50, verbose_name='E-Mail')
     phone_number = models.CharField(max_length=11, verbose_name='Phone',default='')
     #phone_num =models.PhoneNumberField(null=False, blank=False, unique=True)
@@ -37,6 +37,8 @@ class Doctors_profile(models.Model):
     price=models.IntegerField( verbose_name="price")
     image=models.ImageField( verbose_name="Personal Image", upload_to='Doctors_profile', default='',blank=True)
     new_join=models.DateTimeField(verbose_name="joining_Time", auto_now_add=True)
+
+    
     class Meta:
         verbose_name = ("Doctor_profile")
         verbose_name_plural = ("Doctors_profiles")

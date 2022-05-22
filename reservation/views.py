@@ -7,17 +7,16 @@ from .filters import DoctorsFilter
 # Create your views here.
 
 # path("/docbymajor/<int:major_id>")   www.project.com/reservation/docbymajor/2
-def filter(request):
-    
-    
-   # major = Major.objects.get(id=major_id)
-    #doctors = major.doctors.all()
-   '''  docs = Doctors_profile.objects.all()
+# major = Major.objects.get(id=major_id)
+ #doctors = major.doctors.all()
+
+def search(request):
+    docs = Doctors_profile.objects.all()
     myfilters = DoctorsFilter(request.GET,queryset=docs)
     docs = myfilters.qs
     context = {
        # "doctors":doctors, 
         "myfilters":myfilters,
         "docs":docs,
-    } '''
-   return render(request, "reservation/search.html")
+    } 
+    return render(request, "reservation/search.html")
