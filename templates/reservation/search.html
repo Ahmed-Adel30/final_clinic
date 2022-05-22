@@ -1,38 +1,30 @@
-{% comment %} <body>
-    <div class="row">
-        <div class="col">
-            <div class="card card-body">
-    
-                <form method="get">
-                    
-    
-                <button class="btn btn-primary" type="submit">Search</button>
-              </form>
-    
-            </div>
-        </div>
-        
-    </div>
-</body>
+{% extends 'base.html' %}
+{% load static %}
 
+{% block content %}
 
- {% endcomment %}
+<html>
 
-
- <html>
     <head>
+        <link rel="stylesheet"
+        href="{% static 'css/card_style.css' %}">
         <style>
         .city {
-          background-color:rgb(127, 137, 244);
-          color: white;
-          border: 2px solid black;
-          margin: 20px;
+            background-color:rgb(127, 137, 244);
+            color: white;
+            border: 2px solid black;
+            margin: 20px;
           padding: 20px;
         }
-        </style>
-  </head>
+    </style>
+</head>
 
-  <body>
+<body>
+    <section class="slider" id="home">
+        <div class="container-fluid">
+            <div class="row">
+                <div id="carouselHacked" class="carousel slide carousel-fade" data-ride="carousel">
+                    <div class="header-backup"></div>
     <div class="row">
         <div class="col">
             <div class="city">
@@ -40,21 +32,41 @@
                 <form method="GET">
                     {{myfilters.form}}
                 <button class="btn btn-primary" type="submit">Search</button>
-
-                
-               
               </form>
-                       
+              
             </div>
         </div>
         {% for doc in docs %}
-      <p>  {{doc}}
-        {{doc.price}}
-      </p> 
-     {% endfor %}
+        <div class="card-container">
+            <div class="card u-clearfix">
+              <div class="card-body">
+                  <span class="card-author subtle">Doctors</span>
+                 <p> <i class=" card-title"></i> Doctor : <span style="color: blue;">{{doc}}</span></p>
+                                                <p>  Specialty : <span style="color: blue;">{{doc.Specialty}}</span></p>
+                                                <p> Address : <span style="color: blue;">{{doc.location}}</span> </p>
+                                                <p>  Price : <span style="color: blue;">{{doc.price}}</span>  EGP</p>
+                                                <p>Phone Number :<span style="color: blue;">  {{doc.phone_number}} </span>  </p>
+                
+              </div>
+              <img src="{{doc.image.url}}"  alt="" class="card-tag card-circle subtle" />
+              <div class="card-button" >
+                  <input type="submit" value="Book Now" />
+                </div>
+            </div>
+            
+            <div class="card-shadow"></div>
+          </div>
+        {% endfor %}
+
+
+        {% include 'ourservice.html' %}
 
         
     </div>
-
+</div>
+</div>
+</section>
  </body>
-</html> 
+ </html> 
+ 
+ {% endblock content %}

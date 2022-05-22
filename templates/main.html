@@ -79,55 +79,8 @@
 
 
 	<!-- service section starts here -->
-	<section class="service text-center" id="service">
-		<div class="container">
-			<div class="row">
-				<h2>Our services</h2>
-				<h4> provide comprehensive care of the highest quality to patients of all ages. Our patients often find that each step of care can be handled within one facility</h4>
-				<div class="col-md-3 col-sm-6">
-					<div class="single-service">
-						<div class="single-service-img">
-							<div class="service-img">
-                                
-								<img class="heart img-responsive" src= {% static 'img/service1.png' %} alt="">
-							</div>
-						</div>
-						<h3>Heart problem</h3>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-6">
-					<div class="single-service">
-						<div class="single-service-img">
-							<div class="service-img">
-								<img class="brain img-responsive" src= {% static 'img/service2.png' %} alt="">
-							</div>
-						</div>
-						<h3>brain problem</h3>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-6">
-					<div class="single-service">
-						<div class="single-service-img">
-							<div class="service-img">
-								<img class="knee img-responsive" src= {% static 'img/service3.png' %} alt="">
-							</div>
-						</div>
-						<h3>knee problem</h3>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-6">
-					<div class="single-service">
-						<div class="single-service-img">
-							<div class="service-img">
-								<img class="bone img-responsive" src= {% static 'img/service4.png' %} alt="">
-							</div>
-						</div>
-						<h3>human bones problem</h3>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section><!-- end of service section -->
+	{% include 'ourservice.html' %}
+	<!-- end of service section -->
 
 {% endblock content %}
 

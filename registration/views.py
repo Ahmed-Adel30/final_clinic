@@ -33,7 +33,7 @@ def log(request):
         
         if user is not None:
             login(request, user)
-            return redirect('try')
+            return redirect('search')
         else:
             messages.info(request, 'Username OR password is incorrect')
     
