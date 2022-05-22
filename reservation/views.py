@@ -19,4 +19,4 @@ def search(request):
         "myfilters":myfilters,
         "docs":docs,
     } 
-    return render(request, "reservation/search.html")
+    return render(request, "reservation/search.html",context)
