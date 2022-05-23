@@ -34,7 +34,7 @@ class Doctors_profile(models.Model):
     location = models.CharField(max_length=50,verbose_name='Location')
     Specialty = models.CharField(max_length=50,verbose_name='Specialty', choices=category_choise,default='')     
     who_i=models.TextField( verbose_name="synopsis about your self", max_length=250)
-    price=models.IntegerField( verbose_name="fees")
+    price=models.IntegerField( verbose_name="price")
     image=models.ImageField( verbose_name="Personal Image", upload_to='Doctors_profile', default='',blank=True)
     new_join=models.DateTimeField(verbose_name="joining_Time", auto_now_add=True)
 
