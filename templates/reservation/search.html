@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
 {% load static %}
 
+
+
 {% block content %}
 
 <html>
@@ -36,26 +38,30 @@
               
             </div>
         </div>
+
         {% for doc in docs %}
-        <div class="card-container">
-            <div class="card u-clearfix">
-              <div class="card-body">
-                  <span class="card-author subtle">Doctors</span>
-                 <p> <i class=" card-title"></i> Doctor : <span style="color: blue;">{{doc}}</span></p>
-                                                <p>  Specialty : <span style="color: blue;">{{doc.Specialty}}</span></p>
-                                                <p> Address : <span style="color: blue;">{{doc.location}}</span> </p>
-                                                <p>  Price : <span style="color: blue;">{{doc.price}}</span>  EGP</p>
-                                                <p>Phone Number :<span style="color: blue;">  {{doc.phone_number}} </span>  </p>
-                
-              </div>
-              <img src="{{doc.image.url}}"  alt="" class="card-tag card-circle subtle" />
-              <div class="card-button" >
-                  <input type="submit" value="Book Now" />
+            <div class="card-container">
+                <div class="card u-clearfix">
+                <div class="card-body">
+                    <span class="card-author subtle">Doctors</span>
+                    <p> <i class=" card-title"></i> Doctor : <span style="color: blue;">{{doc}}</span></p>
+                                                    <p>  Specialty : <span style="color: blue;">{{doc.Specialty}}</span></p>
+                                                    <p> Address : <span style="color: blue;">{{doc.location}}</span> </p>
+                                                    <p>  Price : <span style="color: blue;">{{doc.price}}</span>  EGP</p>
+                                                    <p>Phone Number :<span style="color: blue;">  {{doc.phone_number}} </span>  </p>
+                    
                 </div>
+                <img src="{{doc.image.url}}"  alt="" class="card-tag card-circle subtle" />
+                
+                <div class="card-button" >
+                    <a href="{% url 'credit_card' %}">
+                    <input type="submit" value="Book Now" />
+                    </a>
+                    </div>
+                </div>
+                
+                <div class="card-shadow"></div>
             </div>
-            
-            <div class="card-shadow"></div>
-          </div>
         {% endfor %}
 
 

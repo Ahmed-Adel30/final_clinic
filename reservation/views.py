@@ -20,3 +20,5 @@ def search(request):
         "docs":docs,
     } 
     return render(request, "reservation/search.html",context)
+
+

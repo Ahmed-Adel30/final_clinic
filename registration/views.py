@@ -39,8 +39,9 @@ def log(request):
     
     return render(request,'registration/log.html')
 
-def try_temp(request):
-    return render(request,'try.html')
+def logOutUser(request):
+    logout(request)
+    return redirect('log')
 
 def lm(request):
     return render(request, 'registration/learnmore.html')
