@@ -12,6 +12,13 @@ from django.contrib.auth.models import User
 #class Specialty(models.Model):
 #    ID = models.CharField(max_length=50)
 
+class  Doc_time(models.Model):
+    user = models.OneToOneField(User , verbose_name="user",on_delete=models.CASCADE,null=True,blank=True)
+    time = models.DateTimeField(verbose_name="appointments", auto_now=False, auto_now_add=False,null=True,blank=True)
+
+    
+
+
 category_choise= (('Dentistry','Dentistry'),
         ('Psychiatry','Psychiatry'),
         ('Neurology ','Neurology '),
@@ -23,11 +30,12 @@ category_choise= (('Dentistry','Dentistry'),
         (' Male Infertility',' Male Infertility'),
         ('Pediatrics and New Born','Pediatrics and New Born'),)
 
+
 class Doctors_profile(models.Model):
     user = models.OneToOneField(User , verbose_name="user",on_delete=models.CASCADE)
 
     name=models.CharField(verbose_name="Name", max_length=50)
-    #role = models.CharField(max_length=7)
+
     E_mail = models.CharField(max_length=50, verbose_name='E-Mail')
     phone_number = models.CharField(max_length=11, verbose_name='Phone',default='')
     #phone_num =models.PhoneNumberField(null=False, blank=False, unique=True)
@@ -37,6 +45,8 @@ class Doctors_profile(models.Model):
     price=models.IntegerField( verbose_name="price")
     image=models.ImageField( verbose_name="Personal Image", upload_to='Doctors_profile', default='',blank=True)
     new_join=models.DateTimeField(verbose_name="joining_Time", auto_now_add=True)
+    DocTime = models.ForeignKey(Doc_time, on_delete=models.CASCADE, verbose_name="Appointments ",null=True,blank=True)
+
 
     
     class Meta:
@@ -51,4 +61,5 @@ class Doctors_profile(models.Model):
 #     user = models.OneToOneField(User, on_delete=models.CASCADE,related_name="v2")
 #     def is_admin(self):
 #         return self.user.is_superuser == 1
+
 

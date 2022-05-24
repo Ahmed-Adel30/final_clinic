@@ -49,14 +49,18 @@
                                                     <p> Address : <span style="color: blue;">{{doc.location}}</span> </p>
                                                     <p>  Price : <span style="color: blue;">{{doc.price}}</span>  EGP</p>
                                                     <p>Phone Number :<span style="color: blue;">  {{doc.phone_number}} </span>  </p>
-                    
+                                                    <p>time :<span style="color: blue;">  {{Dtimes.user}} </span>  </p>
+                                                   
                 </div>
                 <img src="{{doc.image.url}}"  alt="" class="card-tag card-circle subtle" />
                 
                 <div class="card-button" >
                     <a href="{% url 'credit_card' %}">
-                    <input type="submit" value="Book Now" />
-                    </a>
+                    <input type="submit" value="Book Now" /></a>
+                    
+                    
+                    
+                    
                     </div>
                 </div>
                 
