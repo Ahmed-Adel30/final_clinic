@@ -57,7 +57,7 @@ body {
     grid-template-areas: "name name""number number""expiration security";
     max-width: 400px;
     padding: 20px;
-    color: #105d7e;
+    color: #707070;
 }
 
 label {
@@ -65,7 +65,14 @@ label {
     font-size: 13px;
 }
 
-
+input {
+    margin-top: 3px;
+    padding: 15px;
+    font-size: 16px;
+    width: 100%;
+    border-radius: 3px;
+    border: 1px solid #dcdcdc;
+}
 
 .ccicon {
     height: 38px;
@@ -76,12 +83,12 @@ label {
 }
 
 /* CREDIT CARD IMAGE STYLING */
- .preload * {
+.preload * {
     -webkit-transition: none !important;
     -moz-transition: none !important;
     -ms-transition: none !important;
     -o-transition: none !important;
-} 
+}
 
 .container {
     width: 100%;
@@ -123,12 +130,9 @@ label {
 }
 
 input[type="submit"] {
-    width: 150px;
-    height: 50px;
-    position: sticky ;
     margin-top: 20px;
     border: none;
-    background-color: #020b4f;
+    background-color: #4391e4;
     color: white;
     font-size: 18px;
   }
