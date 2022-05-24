@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+{% load static %} 
+
+{% block content %}
+	<section class="slider" id="home">
+		<div class="container-fluid">
+			<div class="row">
+			    <div id="carouselHacked" class="carousel slide carousel-fade" data-ride="carousel">
+					<div class="header-backup"></div>
+			        <!-- Wrapper for slides -->
+			        <div class="carousel-inner" role="listbox">
+			            <div class="item active">
+                            
+			            	<img src= {% static 'img/slide-one.jpg' %} alt="">
+			                <div class="carousel-caption">
+		               			<h1>providing</h1>
+		               			<p>highquality service for men &amp; women</p>
+		               			<a href ="{% url 'LearnMore' %}"><button>learn more</button></a>
+			                </div>
+			            </div>
+			           
+			</div>
+		</div>
+	</section><!-- end of slider section -->
+
+	<!-- about section -->
+	<section class="about text-center" id="about">
+		<div class="container">
+			<div class="row">
+				<h2>About us</h2>
+				<h4>We believe in providing quality health and medical care to you and your family.</h4>
+				<div class="col-md-4 col-sm-6">
+					<div class="single-about-detail clearfix">
+						<div class="about-img">
+                            
+							<img class="img-responsive" src= {% static 'img/item1.jpg' %} alt="">
+						</div>
+						<div class="about-details">
+							<div class="pentagon-text">
+								<h1>C</h1>
+							</div>
+							<h3>Children’s specialist</h3>
+							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6">
+					<div class="single-about-detail">
+						<div class="about-img">
+							<img class="img-responsive" src= {% static 'img/item2.jpg' %} alt="">
+						</div>
+						<div class="about-details">
+							<div class="pentagon-text">
+								<h1>W</h1>
+							</div>
+
+							<h3>Women’s specialist</h3>
+							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6">
+					<div class="single-about-detail">
+						<div class="about-img">
+							<img class="img-responsive" src= {% static 'img/item3.jpg' %} alt="">
+						</div>
+						<div class="about-details">
+							<div class="pentagon-text">
+								<h1>M</h1>
+							</div>
+							<h3>Men’s specialist</h3>
+							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section><!-- end of about section -->
+
+
+	<!-- service section starts here -->
+	{% include 'ourservice.html' %}
+	<!-- end of service section -->
+
+{% endblock content %}
+
+
+
+	
+
+	

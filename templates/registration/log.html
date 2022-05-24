@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <title>Login | By Code Info</title>
+    <link rel="stylesheet" href={% static "css/register_style.css "%}/>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="login-box">
+      <h1>Login</h1>
+      <form method='POST' action=''>
+        {% csrf_token %}
+        <label>Username</label>
+        <input type="text" placeholder="Enter your username", name="username" />
+        <label>Password</label>
+        <input type="Password" placeholder="Enter your password", name="Password" />
+        <input type="submit" value="login Account" />
+      </form>
+
+      {% for message in messages %}
+        {{ message }}
+      {% endfor %}
+
+    </div>
+    <p class="para-2">
+      Don't have an account? <a href="{% url 'register' %}">Sign Up Here</a>
+    </p>
+  </body>
+</html>
+
+

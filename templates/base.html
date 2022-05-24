@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %} 
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	<title>E-Clinic </title>
+    <link rel="shortcut icon" href={% static 'img\favicon.png' %} type="image/x-icon">
+	<link rel="stylesheet" href={% static "css/font-awesome.min.css "%}>
+    <link rel="stylesheet" href={% static "css/bootstrap.min.css "%}>
+    <link rel="stylesheet" href={% static "css/style.css "%}>
+	<link rel="stylesheet" href={% static "css/footer.css "%}>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:600italic,400,800,700,300' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=BenchNine:300,400,700' rel='stylesheet' type='text/css'>
+	
+</head>
+<body>
+	<!-- ====================================================
+	header section -->
+	<header class="top-header">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-5 header-logo">
+					<br>
+					<a href="http://127.0.0.1:8000/"><img src= {% static 'img/logo.png' %} alt=""  style="width:380px;height:60px;" class="img-responsive logo"></a>
+				</div>
+
+				<div class="col-md-7">
+					<nav class="navbar navbar-default">
+					  <div class="container-fluid nav-bar">
+					    <!-- Brand and toggle get grouped for better mobile display -->
+					    <div class="navbar-header">
+					      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					        <span class="sr-only">Toggle navigation</span>
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span>
+					      </button>
+					    </div>
+
+					    <!-- Collect the nav links, forms, and other content for toggling -->
+					    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					      
+					      <ul class="nav navbar-nav navbar-right">
+					        <li><a class="menu active" href="http://127.0.0.1:8000/" >Home</a></li>
+					        <li><a class="menu" href="#about">About us</a></li>
+					        <li><a class="menu" href="#service">Our services </a></li>
+							{% block regis %}
+					        <li><a class="menu" href="{% url 'log' %}">Login</a></li>
+					        <li><a class="menu" href="{% url 'register' %}"> Sign Up</a></li>
+							{% endblock regis %}
+							{% comment %} <div style="background: ghostwhite; 
+											font-size: 20px; 
+											padding: 10px; 
+											border: 1px solid lightgray; 
+											margin: 10px;">
+								This is some dummy text.
+							</div> {% endcomment %}
+
+					      </ul>
+					    </div><!-- /navbar-collapse -->
+					  </div><!-- / .container-fluid -->
+					</nav>
+				</div>
+			</div>
+		</div>
+	</header> <!-- end of header area -->
+    {% block content %}
+
+    {% endblock content %}
+    <!-- footer starts here -->
+	<footer class="footer-dark">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-3 col-md-3 item">
+					
+					<ul>
+						<h3>Find Us</h3>
+						<li><a class="fa fa-location-arrow"> </a>  16th District 6oct.</li>
+						<li><a class="fa fa-location-arrow"></a>  Lebnan mall maadi</li>
+						<li><a class="fa fa-location-arrow"></a>  Arkan 5th settlement</li>
+					</ul>
+				</div>
+				<div class="col-sm-3 col-md-3 item">
+					
+					<ul>
+						<h3>Contact Us</h3>
+						<li><a class="fa fa-phone"> </a>01028882860</li>
+						<li><a class="fa fa-phone">  </a>01034857577</li>
+						<li><a class="fa fa-phone"> </a>01113474721</li>
+					</ul>
+				</div>
+				<div class="col-sm-3 col-md-3 item">
+					
+					<ul>
+						<h3>About Us</h3>
+						<li><p> We believe in providing quality health and medical care to you and your family.</p></li>
+						<li><p>At E-clinic, our strong principles and values shape the way in which we treat our patients and manage our centres.</p></li>
+						<li><p>We strive to provide the best, most comprehensive care to patients without sacrificing convenience or the overall patient experience.</p></li>
+					</ul>
+				</div>
+
+				<div class="col-md-3 item text">
+					
+					<ul>
+						<h3>Follow Us</h3>
+						<li><a href="https://www.facebook.com/" class="fa fa-facebook"></a>  facebook</li>
+						<li><a href="https://www.twitter.com/" class="fa fa-twitter"></a>  twitter</li>
+						<li><a href="https://www.instagram.com/" class="fa fa-instagram"></a>  instagram</li>
+					</ul>
+				</div>
+				
+				
+			</div>
+			<p class="copyright">Must uni © 2022</p>
+		</div>
+	</footer>
+
+	
+</body>
+</html>
