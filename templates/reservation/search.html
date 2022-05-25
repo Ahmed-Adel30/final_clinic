@@ -55,12 +55,14 @@
                 <img src="{{doc.image.url}}"  alt="" class="card-tag card-circle subtle" />
                 
                 <div class="card-button" >
-                    {% for x in Dtimes %}
-                        <p>time :<span style="color: blue;">  {{x.time}} </span>  </p>
-                    {% endfor %}
-                    <a href="{% url 'credit_card' %}">
-                    <input type="submit" value="Book Now" /></a>  
                     
+                        <p>time :<span style="color: blue;">  {{doc.DocTime}} </span>  </p>
+                    <form action="" method="POST">
+                        {% csrf_token %}
+                        {{form}}
+                    
+                    <input type="submit" value="Book Now" /></a>  
+                    </form>
                     </div>
                 </div>
                 

@@ -1,0 +1,14 @@
+ {% load static %}
+
+    <form method="POST">
+        {% csrf_token %}
+        <!-- Security token by Django -->
+     <p> Do u ready want to Delete this </p>
+ 
+       
+ 
+        <button type="submit" value="Delete">Delete</button>
+        
+            
+        <a href="{% url 'conformation' %}" type="button" value="Back">Back</a>   
+    </form>
