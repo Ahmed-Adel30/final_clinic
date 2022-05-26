@@ -1,5 +1,6 @@
+from multiprocessing import context
 from django.shortcuts import get_object_or_404, redirect, render
-
+from django.contrib import messages
 from payment.models import Payment
 from .forms import  PaymentForm
 
@@ -57,5 +58,6 @@ def delete(request, id):
     
 
 def congrats(request):
+    messages.success(request, 'Booking has been created successfuly.')
     return render(request, "payment/congrats.html")
     

@@ -49,18 +49,19 @@
                                                     <p> Address : <span style="color: blue;">{{doc.location}}</span> </p>
                                                     <p>  Price : <span style="color: blue;">{{doc.price}}</span>  EGP</p>
                                                     <p>Phone Number :<span style="color: blue;">  {{doc.phone_number}} </span>  </p>
+                                                    <p>Appiontments :<span style="color: blue;"> <select>
+                                                        <option value="">{{doc.DocTime}}</option> 
+                                                    </select>    </span>  </p> 
+                                                    
                                                     
                                                     
                 </div>
                 <img src="{{doc.image.url}}"  alt="" class="card-tag card-circle subtle" />
                 
                 <div class="card-button" >
-                    
-                        <p>time :<span style="color: blue;">  {{doc.DocTime}} </span>  </p>
                     <form action="" method="POST">
                         {% csrf_token %}
-                        {{form}}
-                    
+                        
                     <input type="submit" value="Book Now" /></a>  
                     </form>
                     </div>

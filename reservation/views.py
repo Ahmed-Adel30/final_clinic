@@ -1,7 +1,7 @@
 from django.http import QueryDict
 from django.shortcuts import redirect, render
 from django.urls import is_valid_path
-from django.contrib import messages
+
 from .models import Doc_time, Doctors_profile
 from .filters import DoctorsFilter
 from .forms import Doc_timeForm
@@ -25,8 +25,7 @@ def search(request):
         form= Doc_timeForm(request.POST)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Booking has been created successfuly.')
-            return redirect("congrats")
+            return redirect("credit_card")
         
     return render(request, "reservation/search.html",context)
 

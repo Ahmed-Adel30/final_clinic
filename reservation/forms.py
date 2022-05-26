@@ -7,5 +7,5 @@ class Doc_timeForm(forms.ModelForm):
         model = Doc_time
         fields = ["time"]
         widgets={
-      'time':forms.Select()
+       'time':forms.Select()
     } 
