@@ -18,6 +18,9 @@
             margin: 20px;
           padding: 20px;
         }
+        input, select, option {
+            color:black !important;
+        }
     </style>
 </head>
 
@@ -50,7 +53,7 @@
                                                     <p>  Price : <span style="color: blue;">{{doc.price}}</span>  EGP</p>
                                                     <p>Phone Number :<span style="color: blue;">  {{doc.phone_number}} </span>  </p>
                                                     <p>Appiontments :<span style="color: blue;"> <select>
-                                                        <option value="">{{doc.DocTime}}</option> 
+                                                        <option value="">{{doc.DocTime.time}}</option> 
                                                     </select>    </span>  </p> 
                                                     
                                                     
@@ -61,7 +64,8 @@
                 <div class="card-button" >
                     <form action="" method="POST">
                         {% csrf_token %}
-                        
+                        <input type="text" name="user_id" hidden="true" value="{{request.user.id}}">
+                        <input type="text" name="doc_id" hidden="true" value="{{doc.id}}">
                     <input type="submit" value="Book Now" /></a>  
                     </form>
                     </div>

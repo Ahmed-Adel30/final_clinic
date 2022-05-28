@@ -2,8 +2,8 @@
 {% load static %}
 <p>Are u sure u want to submit ?</p>
 <a href ="{% url 'congrats' %}"><button>Submit</button></a>
-<a href ="{% url 'congrats' %}"><button>Update</button></a>
-<a href ="{% url 'congrats' %}"><button>Delete</button></a>
-{% for x in pay %}
+<a href ="/payment/update/{{pay.id}}"><button>Update</button></a>
+<a href ="/payment/delete/{{pay.id}}"><button>Delete</button></a>
+{% comment %} {% for x in pay %}
 {{x.id}}
-{% endfor %}
+{% endfor %} {% endcomment %}
