@@ -12,8 +12,9 @@ def pay(request):
     if request.method =='POST':
         add_payment=PaymentForm(request.POST)
         if add_payment.is_valid():
-            add_payment.save()
-            return redirect('conformation')
+            payment = add_payment.save()
+            # return redirect('conformation')
+            return conformation(request, payment.id)
 
     context={'form':form,
              'pay':pay,
@@ -22,8 +23,8 @@ def pay(request):
     return render(request,"payment/credit_card.html",context)
 
 
-def conformation(request):
-    pay = Payment.objects.all()
+def conformation(request, pay_id):
+    pay = Payment.objects.get(id=pay_id)
     context={
              'pay':pay,
              }
@@ -51,7 +52,7 @@ def delete(request, id):
     pay_delete = get_object_or_404(Payment, id=id) #same as .objects.get(id=id)
     if request.method == 'POST' :
         pay_delete.delete()
-        return redirect('credit_card')
+        return redirect('main')
     return render(request, "payment/delete.html")
         
     

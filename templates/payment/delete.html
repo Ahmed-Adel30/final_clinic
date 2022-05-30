@@ -1,14 +1,25 @@
  {% load static %}
+ <html>
+    
+ <head>
+         <link rel="stylesheet" href={% static 'css/congrats.css' %} />
+         <link rel="stylesheet" href={% static 'css/button.css' %} />
+
+     </head>
+<div class="congrats">
 
     <form method="POST">
         {% csrf_token %}
         <!-- Security token by Django -->
-     <p> Do u ready want to Delete this </p>
+     <h3>Are you sure you want to delete the information you entered?</h3>
  
-       
+      <div class="button4">
  
-        <button type="submit" value="Delete">Delete</button>
-        
-            
-        <a href="{% url 'conformation' %}" type="button" value="Back">Back</a>   
-    </form>
+         <button type="submit" class= "button4" value="Delete">Delete</button> <br><br><br>
+         
+         <a href="{% url 'conformation' %}"   value="Back">Back</a>
+         
+      </div>
+      </form>
+</div>
+</html>   

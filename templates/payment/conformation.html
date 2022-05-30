@@ -1,9 +1,56 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
 {% load static %}
-<p>Are u sure u want to submit ?</p>
-<a href ="{% url 'congrats' %}"><button>Submit</button></a>
-<a href ="{% url 'congrats' %}"><button>Update</button></a>
-<a href ="{% url 'congrats' %}"><button>Delete</button></a>
-{% for x in pay %}
-{{x.id}}
-{% endfor %}
+{% block content %}
+
+<!DOCTYPE html>
+
+<section class="slider" id="home">
+    <div class="container-fluid">
+        <div class="row">
+            <div id="carouselHacked" class="carousel slide carousel-fade" data-ride="carousel">
+                <div class="header-backup"></div>
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <div style="background: ghostwhite; 
+                                font-size: 20px; 
+                                padding: 5px; 
+                                border: 1.5px solid lightgray; 
+                                margin: 5px;">
+                                <h2>
+                                    Are you sure you want to submit ?
+                                </h2> 
+                                <a href ="{% url 'congrats' %}"><button>Submit</button></a>
+                                <a href ="/payment/update/{{pay.id}}"><button>Update</button></a>
+                                <a href ="/payment/delete/{{pay.id}}"><button>Delete</button></a>
+
+
+
+                    </div>         
+                    {% include 'ourservice.html' %}
+                </div>
+    </div>
+</section>
+
+
+
+
+    
+{% endblock %}    
+
+
+
+
+
+
+
+
+
+
+
+
+            <h3>Are u sure u want to submit ?</h3>
+    <a href ="{% url 'congrats' %}"><button>Submit</button></a>
+    <a href ="/payment/update/{{pay.id}}"><button>Update</button></a>
+    <a href ="/payment/delete/{{pay.id}}"><button>Delete</button></a>
+</div> 
+</html>   

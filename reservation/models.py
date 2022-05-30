@@ -38,7 +38,6 @@ class Doctors_profile(models.Model):
 
     E_mail = models.CharField(max_length=50, verbose_name='E-Mail')
     phone_number = models.CharField(max_length=11, verbose_name='Phone',default='')
-    #phone_num =models.PhoneNumberField(null=False, blank=False, unique=True)
     location = models.CharField(max_length=50,verbose_name='Location')
     Specialty = models.CharField(max_length=50,verbose_name='Specialty', choices=category_choise,default='')     
     who_i=models.TextField( verbose_name="synopsis about your self", max_length=250)
@@ -57,9 +56,5 @@ class Doctors_profile(models.Model):
         return self.name
 
 
-#eng.zeyad instructions
-#     user = models.OneToOneField(User, on_delete=models.CASCADE,related_name="v2")
-#     def is_admin(self):
-#         return self.user.is_superuser == 1
 
 
