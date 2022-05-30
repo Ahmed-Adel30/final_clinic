@@ -5,7 +5,8 @@
 {% endblock RemoveAboutUs %}
 
 {% block regis %}
-<li><a class="menu" href="{% url 'log' %}">LogOut</a></li>
+<li><a class="menu" >Hello, {{request.user}} </a></li>
+<li><a class="menu" href="{% url 'LogOut' %}">LogOut</a></li>
 {% endblock regis %}
 
 
@@ -31,7 +32,7 @@
     
                 <form class="city"method="GET">
                     {{myfilters.form}}
-                <button class="btn btn-primary" type="submit">Search</button>
+                <button  class="search_button" type="submit">Search</button>
               </form>
               
             </div>
