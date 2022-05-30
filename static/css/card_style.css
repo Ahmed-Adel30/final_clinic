@@ -7,12 +7,26 @@ html {
     font-weight: 400;
   }
   .city {
-    background-color:#3baade;
+    background-color:#42b3e5;
     color: white;
     border: 2px solid black;
     margin: 20px;
-  padding: 20px;
+    padding: 20px;
 }
+.search_button {
+    float: right;
+    width: 110px;
+    height: 30px;
+    border: 2px solid black;
+    background-color: #ffffff;
+    border-radius: 6px;
+    color: #42b3e5;
+    font-size: 20px;
+    font-style: normal ;
+    font-weight: 1000;
+
+}
+
 input, select, option {
     color:black !important;
 }
@@ -49,15 +63,18 @@ input, select, option {
     width: 135px;
     height: 40px;
     margin-top: 20px;
-    border: none;
-    background-color: #3baade;
+    border: 2px solid black;
+    border-radius: 6px;
+    background-color: #42b3e5;
     color: white;
     font-size: 18px;
+    text-align:center;
   }
   
   .card {
     background-color: #fff;
     padding: 30px;
+    
     position: relative;
     box-shadow: 0 0 5px rgba(75, 75, 75, .07);
     z-index: 1;
