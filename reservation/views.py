@@ -22,13 +22,15 @@ def search(request):
         "form":form   
     } 
     if request.method =='POST':
-        
+        # form= Doc_timeForm(request.POST)
+        # if form.is_valid():
+        #     form.save()
+        #     return redirect("credit_card")
         user_id = request.POST.get("user_id")
         doc_id = request.POST.get("doc_id")
         user = User.objects.get(id=user_id)
         doctor = Doctors_profile.objects.get(id=doc_id)
         doctor_dt =doctor.DocTime.time
-        
         docTime = Doc_time(user=user, time=doctor_dt)
         docTime.save()
         return redirect("credit_card")

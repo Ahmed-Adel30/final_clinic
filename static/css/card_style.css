@@ -1,11 +1,21 @@
 html {
     background: #FAF7F2;
-    background-image: url(https://s3.postimg.org/s1n3ji1ur/paper_fibers_2_X.png);
+    
     box-sizing: border-box;
     font-family: 'Lato', sans-serif;
     font-size: 14px;
     font-weight: 400;
   }
+  .city {
+    background-color:#3baade;
+    color: white;
+    border: 2px solid black;
+    margin: 20px;
+  padding: 20px;
+}
+input, select, option {
+    color:black !important;
+}
   
   *, *:before, *:after {
     box-sizing: inherit;
@@ -40,7 +50,7 @@ html {
     height: 40px;
     margin-top: 20px;
     border: none;
-    background-color: #2c64f4;
+    background-color: #3baade;
     color: white;
     font-size: 18px;
   }
@@ -69,14 +79,14 @@ html {
     display: inline-block;
     line-height: 22px;
     font-size: 12px;
-    height: 120px;
+    height: 145px;
     text-align: center;
-    width: 120px;
+    width: 145px;
   }
   
   .card-author {
     display: block;
-    font-size: 12px;
+    font-size: 14px;
     letter-spacing: .5px;
     margin: 15px 0 0;
     text-transform: uppercase;
@@ -101,9 +111,8 @@ html {
     cursor: pointer;
     font-size: 14px;
     font-weight: 700;
-    letter-spacing: 6px;
+    letter-spacing: 2.5px;
     margin: 5px 0 20px;
-    position: relative;
     text-align: right;
     text-transform: uppercase;
   }
@@ -120,7 +129,7 @@ html {
 
   .card-button
   {
-      float: right;
+      float: right ;
   }
   
   .card-tag {
