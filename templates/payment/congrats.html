@@ -1,4 +1,21 @@
-<h1>bravo</h1>
-{% for message in messages %}
-        {{ message }}
-{% endfor %}
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<head>
+        <link rel="stylesheet" href={% static 'css/congrats.css' %} />
+    </head>
+<div class="contain">
+	<div class="congrats">
+		<h1>Congrat<span class="hide">ulation</span>s !</h1>
+
+		<div class="text">
+		<p>You have successfully booked an appointment with us. <br>Hope you will get better with us <br>It won't be our last interaction though :/<br>
+			
+		</p>
+			<p>Eagerly awaiting your visit!!
+			</p>
+			</div>
+		<p class="regards">Regards, E-Clinic Team</p>
+	</div>
+</div>
+{% endblock content %}

@@ -52,7 +52,7 @@ def delete(request, id):
     pay_delete = get_object_or_404(Payment, id=id) #same as .objects.get(id=id)
     if request.method == 'POST' :
         pay_delete.delete()
-        return redirect('credit_card')
+        return redirect('main')
     return render(request, "payment/delete.html")
         
     
