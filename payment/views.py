@@ -59,6 +59,5 @@ def delete(request, id):
     
 
 def congrats(request):
-    messages.success(request, 'Booking has been created successfuly.')
     return render(request, "payment/congrats.html")
     
