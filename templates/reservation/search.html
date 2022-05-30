@@ -1,6 +1,13 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block RemoveAboutUs %}
+{% endblock RemoveAboutUs %}
+
+{% block regis %}
+<li><a class="menu" href="{% url 'log' %}">LogOut</a></li>
+{% endblock regis %}
+
 
 
 {% block content %}
@@ -10,18 +17,6 @@
     <head>
         <link rel="stylesheet"
         href="{% static 'css/card_style.css' %}">
-        <style>
-        .city {
-            background-color:rgb(127, 137, 244);
-            color: white;
-            border: 2px solid black;
-            margin: 20px;
-          padding: 20px;
-        }
-        input, select, option {
-            color:black !important;
-        }
-    </style>
 </head>
 
 <body>
@@ -34,7 +29,7 @@
         <div class="col">
             <div class="city">
     
-                <form method="GET">
+                <form class="city"method="GET">
                     {{myfilters.form}}
                 <button class="btn btn-primary" type="submit">Search</button>
               </form>
@@ -47,12 +42,12 @@
                 <div class="card u-clearfix">
                 <div class="card-body">
                     <span class="card-author subtle">Doctors</span>
-                    <p> <i class=" card-title"></i> Doctor : <span style="color: blue;">{{doc}}</span></p>
-                                                    <p>  Specialty : <span style="color: blue;">{{doc.Specialty}}</span></p>
-                                                    <p> Address : <span style="color: blue;">{{doc.location}}</span> </p>
-                                                    <p>  Price : <span style="color: blue;">{{doc.price}}</span>  EGP</p>
-                                                    <p>Phone Number :<span style="color: blue;">  {{doc.phone_number}} </span>  </p>
-                                                    <p>Appiontments :<span style="color: blue;"> <select>
+                    <p>  Doctor : <span class=" card-read" style="color: blue;">{{doc}}</span></p>
+                                                    <p >  Specialty : <span class=" card-read" style="color: blue;">{{doc.Specialty}}</span></p>
+                                                    <p> Address : <span class=" card-read" style="color: blue;">{{doc.location}}</span> </p>
+                                                    <p>  Price : <span class=" card-read" style="color: blue;">{{doc.price}}</span>  EGP</p>
+                                                    <p>Phone Number :<span class=" card-read" style="color: blue;">  {{doc.phone_number}} </span>  </p>
+                                                    <p>Appiontments :<span class=" card-read" style="color: blue;"> <select>
                                                         <option value="">{{doc.DocTime.time}}</option> 
                                                     </select>    </span>  </p> 
                                                     

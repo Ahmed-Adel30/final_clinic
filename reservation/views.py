@@ -31,7 +31,6 @@ def search(request):
         user = User.objects.get(id=user_id)
         doctor = Doctors_profile.objects.get(id=doc_id)
         doctor_dt =doctor.DocTime.time
-        
         docTime = Doc_time(user=user, time=doctor_dt)
         docTime.save()
         return redirect("credit_card")
